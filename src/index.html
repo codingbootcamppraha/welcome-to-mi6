@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MI6 Agent's interface</title>
+
+    <link rel="stylesheet" href="style.scss">
+  </head>
+  <body>
+
+    <!-- your code here -->
+    <!-- refer to images in /public with URLs beginning with / -->
+    <nav class="left-menu">
+
+      <div class="left-menu__visibility-toggle">&#60;</div>
+
+      <div class="left-menu__content">
+
+          <div class="left-menu__header">
+              <img class="left-menu__seal" src="/img/mi6-seal.png" alt="MI6 seal" />
+          </div>
+
+          <div class="left-menu__links">
+              <a to="/">Home</a>
+              <a to="/people-of-interest">People of interest</a>
+          </div>
+      </div>
+
+    </nav>
+
+    <div class="main">
+      <h1>Welcome to MI6</h1>
+    </div>
+
+    <script>
+        const button = document.querySelector('.left-menu__visibility-toggle')
+        const navPanel = document.querySelector('.left-menu')
+
+        button.addEventListener('click', () => {
+            navPanel.classList.toggle('left-menu_hidden')
+            button.textContent = button.textContent == '>' ? '<' : '>'
+        })
+    </script>
+  </body>
+</html>
