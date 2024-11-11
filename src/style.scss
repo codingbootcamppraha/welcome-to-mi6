@@ -18,7 +18,6 @@ body {
     background-color: #163838;
     font-family: 'Cutive Mono';
     position: relative;
-    margin-right: 3rem;
 
     &__content {
         padding-top: 2rem;
@@ -59,16 +58,18 @@ body {
     }
 
     &__links {
-        margin-top: 1rem;
         align-self: stretch;
         display: flex;
         flex-direction: column;
+        margin-top: 1rem;
+        overflow: hidden;
 
         a {
-            font-size: 1.5em;
             color: inherit;
-            text-decoration: none;
+            font-size: 1.5em;
             padding: 0.5em;
+            text-decoration: none;
+            text-wrap: nowrap;
 
             &:hover {
                 background-color: #2B5554;
@@ -78,12 +79,15 @@ body {
 }
 
 .main {
-    background: #2B5554 url("/img/mi6-seal-bg.png") center center/contain no-repeat scroll;
-    flex-grow: 1;
+    align-items: center;
+    background: #2B5554 url("/img/mi6-seal-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
-    align-items: center;
     padding: 1rem;
 
     h1 {
